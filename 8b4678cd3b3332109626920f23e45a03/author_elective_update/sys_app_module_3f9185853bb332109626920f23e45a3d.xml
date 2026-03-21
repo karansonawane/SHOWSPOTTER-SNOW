@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Search Shows">339185853bb332109626920f23e45a39</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Search Shows</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1962882_show_s_0_st_search_shows</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_1962882_show_s_0.search_shows_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 10:17:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3f9185853bb332109626920f23e45a3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Search Shows</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_app_module_3f9185853bb332109626920f23e45a3d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 10:17:13</sys_updated_on>
+        <timeline_page/>
+        <title>Search Shows</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</application>
+        <file_path/>
+        <instance_id>9e8b3b61ebdbf290c040fddacad0cde8</instance_id>
+        <instance_name>dev363337</instance_name>
+        <name>sys_app_module_3f9185853bb332109626920f23e45a3d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Search Shows">339185853bb332109626920f23e45a39</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Search Shows</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1962882_show_s_0_st_search_shows</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_1962882_show_s_0.search_shows_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-03-21 10:17:13</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3f9185853bb332109626920f23e45a3d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Search Shows</sys_name><sys_overrides/><sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package><sys_policy/><sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope><sys_update_name>sys_app_module_3f9185853bb332109626920f23e45a3d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-03-21 10:17:13</sys_updated_on><timeline_page/><title>Search Shows</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>488302039</payload_hash>
+        <record_name>Search Shows</record_name>
+        <reverted_from/>
+        <source>810f7c013bb332109626920f23e45ae7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 10:17:14</sys_created_on>
+        <sys_id>ff9185853bb332109626920f23e45a4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19d0fe624770000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 10:17:14</sys_updated_on>
+        <type>Module</type>
+        <update_guid>bf9185852ab33210cc9ed96326cad94c</update_guid>
+        <update_guid_history>bf9185852ab33210cc9ed96326cad94c:488302039</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Search Shows">52c14d853bb332109626920f23e45a77</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 10:17:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>0f5adb171f23491a816b46588f84ce09</sys_id>
+        <sys_metadata>3f9185853bb332109626920f23e45a3d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Search Shows</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_scope_delete display_value="">2a91e33fbeea492c8d6870154d849ef9</sys_scope_delete>
+        <sys_update_name>sys_app_module_3f9185853bb332109626920f23e45a3d</sys_update_name>
+        <sys_update_version display_value="sys_app_module_3f9185853bb332109626920f23e45a3d">ff9185853bb332109626920f23e45a4d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 10:17:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

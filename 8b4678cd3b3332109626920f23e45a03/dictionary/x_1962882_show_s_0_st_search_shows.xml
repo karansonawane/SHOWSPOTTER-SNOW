@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="08d1cd853bb332109626920f23e45abc" label="Search Shows" max_length="40" name="x_1962882_show_s_0_st_search_shows" type="collection">
+        <element label="Id" max_length="40" name="id" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Release Date" max_length="40" name="release_date" type="string"/>
+        <element label="Overview" max_length="10000" name="overview" type="string"/>
+        <element label="Poster" max_length="8000" name="poster" type="html"/>
+        <element label="Genres" max_length="40" name="genres" type="string"/>
+        <element label="Rating" max_length="40" name="rating" type="string"/>
+    </element>
+</database>
