@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>showId</name>
+        <rest_message_function display_value="Search Single Show">e6d399893b3732109626920f23e45a58</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 11:39:48</sys_created_on>
+        <sys_id>cf44d5c93b3732109626920f23e45aa7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>showId</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_cf44d5c93b3732109626920f23e45aa7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 11:39:48</sys_updated_on>
+        <type>string</type>
+        <value>1523145</value>
+    </sys_rest_message_fn_parameters>
+</record_update>
