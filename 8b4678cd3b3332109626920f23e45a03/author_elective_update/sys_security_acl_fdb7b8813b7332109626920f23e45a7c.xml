@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Default access control on x_1962882_show_s_0_show_spotter</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_1962882_show_s_0_show_spotter</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 09:33:57</sys_created_on>
+        <sys_id>fdb7b8813b7332109626920f23e45a7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1962882_show_s_0_show_spotter</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_security_acl_fdb7b8813b7332109626920f23e45a7c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 09:33:57</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</application>
+        <file_path/>
+        <instance_id>9e8b3b61ebdbf290c040fddacad0cde8</instance_id>
+        <instance_name>dev363337</instance_name>
+        <name>sys_security_acl_fdb7b8813b7332109626920f23e45a7c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description>Default access control on x_1962882_show_s_0_show_spotter</description><local_or_existing>Existing</local_or_existing><name>x_1962882_show_s_0_show_spotter</name><operation display_value="create">create</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-03-21 09:33:57</sys_created_on><sys_id>fdb7b8813b7332109626920f23e45a7c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1962882_show_s_0_show_spotter</sys_name><sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package><sys_policy/><sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope><sys_update_name>sys_security_acl_fdb7b8813b7332109626920f23e45a7c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-03-21 09:33:57</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-1562235318</payload_hash>
+        <record_name>x_1962882_show_s_0_show_spotter</record_name>
+        <reverted_from/>
+        <source>8b4678cd3b3332109626920f23e45a25</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 09:33:58</sys_created_on>
+        <sys_id>8eb7b8813b7332109626920f23e45a91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19d0fbe880f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 09:33:58</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>4eb7b8813d73321004280c7f30533390</update_guid>
+        <update_guid_history>4eb7b8813d73321004280c7f30533390:-1562235318</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 10:07:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>1239086813bf43d888ce839e41afa284</sys_id>
+        <sys_metadata>fdb7b8813b7332109626920f23e45a7c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1962882_show_s_0_show_spotter</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_parent display_value="">46b7b8813b7332109626920f23e45abf</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_scope_delete display_value="">2a91e33fbeea492c8d6870154d849ef9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_fdb7b8813b7332109626920f23e45a7c</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_fdb7b8813b7332109626920f23e45a7c">8eb7b8813b7332109626920f23e45a91</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 10:07:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
