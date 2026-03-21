@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <cache_empty_query_results>true</cache_empty_query_results>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <delete_script><![CDATA[(function executeDelete(v_record) {
+     // Parameters:
+     //      v_record - a map of field names and values containing (among others) the
+     //              sys_id of the record that needs to be deleted on the remote system
+     //          v_record.<field_name>                  - fields in the remote table GlideRecord
+     //          v_record.setLastErrorMessage(message)   - signal an error
+ 
+     // Sample code:
+     //  try {
+     //      update-external-system;
+     //      if (there-was-an-error) {
+     //          var message = ...;
+     //          v_record.setLastErrorMessage(message);
+     //      }
+     //  } catch (ex) {
+     //      var message = ex.getMessage();
+     //      v_record.setLastErrorMessage(message);
+     //  }
+  })(v_record);]]></delete_script>
+        <editable>false</editable>
+        <enhanced_capacity>false</enhanced_capacity>
+        <flow/>
+        <insert_script><![CDATA[(function executeInsert(v_record) {
+     // Parameters:
+     //      v_record is a map of field names and values containing the sys_id of the
+     //              record and the fields that need to be inserted in the record on the
+     //              remote system (source of data)
+     
+     //          v_record.<field_name>                   - fields in the remote table GlideRecord
+     //          v_record.setLastErrorMessage(message)   - signal an error
+ 
+     // Sample code:
+     //  try {
+     //      update-external-system;
+     //      if (there-was-an-error) {
+     //          var message = ...;
+     //          v_record.setLastErrorMessage(message);
+     //      }
+     //  } catch (ex) {
+     //      var message = ex.getMessage();
+     //      v_record.setLastErrorMessage(message);
+     //  }
+  })(v_record);]]></insert_script>
+        <name>Pull Shows</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+
+    // INTRODUCING THE SHOWSSPOTTER
+
+    var IMG_URL = "https://image.tmdb.org/t/p/w500";
+
+    /********** fetchShowsFuncResp(): Fetch movies dynamically like list of 'Latest Popular Shows', single 'Latest Popular Shows', and search desired movie *********/
+
+    function fetchShowsDynamically({
+        restMessage,
+        restMethod,
+        id,
+        movieName
+    }) {
+        try {
+            var r = new sn_ws.RESTMessageV2(restMessage, restMethod);
+            if (id) r.setStringParameterNoEscape('movieId', id);
+            if (movieName) r.setQueryParameter('query', movieName);
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            return {
+                'responseData': responseBody ? JSON.parse(responseBody) : [],
+                'httpStatus': httpStatus
+            };
+        } catch (ex) {
+            var message = ex.message;
+            gs.addErrorMessage(message);
+        }
+    }
+
+    /******** Push list of movies in a list view of the remote table or push single movie in form view *******/
+
+    function pushDataToTable({
+        showData,
+        requestedSys
+    }) {
+        try {
+            var movieRatingArr = showData.vote_average.toString().split('.');
+            var str;
+            var genresArr = [];
+            var posterUrl = IMG_URL + showData.poster_path;
+            if (showData.genres && showData.genres.length > 0) {
+                showData.genres.map(function(item) {
+                    genresArr.push(item.name);
+                });
+            }
+            var rowObj = {
+                sys_id: requestedSys ? requestedSys : showData.id + "_" + gs.generateGUID(),
+                name: showData.title,
+                id: showData.id,
+                overview: showData.overview,
+                rating: movieRatingArr[1] ? movieRatingArr[0] + '.' + movieRatingArr[1].slice(0, 1) : movieRatingArr[0],
+                release_date: showData.release_date,
+                genres: genresArr.join(', '),
+                poster: '<img src="' + posterUrl + '" width="180" />'
+            };
+            v_table.addRow(rowObj);
+        } catch (ex) {
+            var message = ex.message;
+            gs.addErrorMessage(message);
+        }
+    }
+
+    /******** Dynamically calling the APIs and pushing data in the remote table based on the logic ********/
+
+    try {
+        /* var searchedMovieName = v_query.getCondition('u_name') && v_query.getCondition('u_name').split('=')[1];
+        if (searchedMovieName) {
+            var searchMovieFuncResp = fetchMoviesDynamically({
+                restMessage: 'The MovieDatabase(TMDB)',
+                restMethod: 'Search Movie',
+                movieName: searchedMovieName
+            });
+            if (searchMovieFuncResp.httpStatus == '200') {
+                searchMovieFuncResp.responseData.results.forEach(function(item) {
+                    pushDataToTable({
+                        movieData: item
+                    });
+                });
+            }
+        } */
+        if (v_query.getSysId()) {
+            /* var fetchSingleMovieFuncResp = fetchMoviesDynamically({
+                restMessage: 'The MovieDatabase(TMDB)',
+                restMethod: 'Fetch Single Top Rated Movie',
+                id: v_query.getSysId().split('_')[0]
+            });
+            var movieObj = fetchSingleMovieFuncResp.responseData;
+            if (fetchSingleMovieFuncResp.httpStatus == '200') {
+                pushDataToTable({
+                    movieData: movieObj,
+                    requestedSys: v_query.getSysId()
+                });
+                if (new global.ShowSpotterDAO().validateMyWatchList(movieObj)) {
+                    gs.addInfoMessage(movieObj.title + '" is already in your watchlist.');
+                }
+            } */
+        } else {
+            var fetchShowsFuncResp = fetchShowsDynamically({
+                restMessage: 'SHOW-SPOTTER',
+                restMethod: 'Latest Popular Movies'
+            });
+            if (fetchShowsFuncResp.httpStatus == '200') {
+                var showsArr = fetchShowsFuncResp.responseData.results;
+                if (showsArr) {
+                    showsArr.forEach(function(show) {
+                        pushDataToTable({
+                            showData: show
+                        });
+                    });
+                }
+            }
+
+
+
+            // TOP RATED MOVIES
+            /* var fetchMoviesFuncResp = fetchMoviesDynamically({
+                restMessage: 'The MovieDatabase(TMDB)',
+                restMethod: 'Top Rated Movies'
+            });
+            if (fetchMoviesFuncResp.httpStatus == '200') {
+                var moviesArr = fetchMoviesFuncResp.responseData.results;
+                if (moviesArr) {
+                    moviesArr.forEach(function(item) {
+                        pushDataToTable({
+                            movieData: item
+                        });
+                    });
+                }
+            } */
+        }
+    } catch (ex) {
+        var message = ex.message;
+    }
+
+})(v_table, v_query);]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 10:38:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>524641013bf332109626920f23e45ad4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Pull Shows</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_script_vtable_524641013bf332109626920f23e45ad4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 10:54:32</sys_updated_on>
+        <table>x_1962882_show_s_0_st_search_shows</table>
+        <update_script><![CDATA[(function executeUpdate(v_record, v_changed_fields) {
+     // Parameters:
+     //    v_record - a map of field names and values containing the sys_id of the record
+     //          v_record.<field_name>                   - fields in the remote table GlideRecord
+     //          v_record.setLastErrorMessage(message)   - signal an error
+     //    v_changed_fields - a map of field names and values containing the sys_id of the
+     //          v_changed_fields.<field_name>           - changed fields in the remote table GlideRecord
+ 
+     // Sample code:
+     //  try {
+     //      update-external-system;
+     //      if (there-was-an-error) {
+     //          var message = ...;
+     //          v_record.setLastErrorMessage(message);
+     //      }
+     //  } catch (ex) {
+     //      var message = ex.getMessage();
+     //      v_record.setLastErrorMessage(message);
+     //  }
+  })(v_record, v_changed_fields);]]></update_script>
+    </sys_script_vtable>
+</record_update>
