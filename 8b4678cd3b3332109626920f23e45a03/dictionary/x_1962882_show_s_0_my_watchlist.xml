@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6385a5d53b77b2109626920f23e45acc" label="My Watchlist" max_length="40" name="x_1962882_show_s_0_my_watchlist" type="collection">
+        <element label="Rating" max_length="40" name="rating" read_only="true" type="string"/>
+        <element label="Name" max_length="40" name="name" read_only="true" type="string"/>
+        <element label="Release Date" max_length="40" name="release_date" read_only="true" type="string"/>
+        <element label="Poster" max_length="8000" name="poster" read_only="true" type="html"/>
+        <element label="Overview" max_length="100000" name="overview" read_only="true" type="string"/>
+        <element label="Genres" max_length="40" name="genres" read_only="true" type="string"/>
+        <element label="Id" max_length="40" name="id" read_only="true" type="string"/>
+    </element>
+</database>

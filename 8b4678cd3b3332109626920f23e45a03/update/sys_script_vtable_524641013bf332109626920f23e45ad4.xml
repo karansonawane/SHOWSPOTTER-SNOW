@@ -62,12 +62,12 @@
         restMessage,
         restMethod,
         id,
-        movieName
+        showName
     }) {
         try {
             var r = new sn_ws.RESTMessageV2(restMessage, restMethod);
             if (id) r.setStringParameterNoEscape('showId', id);
-            if (movieName) r.setQueryParameter('query', movieName);
+            if (showName) r.setQueryParameter('query', showName);
 
             var response = r.execute();
             var responseBody = response.getBody();
@@ -118,21 +118,21 @@
     /******** Dynamically calling the APIs and pushing data in the remote table based on the logic ********/
 
     try {
-        /* var searchedMovieName = v_query.getCondition('u_name') && v_query.getCondition('u_name').split('=')[1];
-        if (searchedMovieName) {
-            var searchMovieFuncResp = fetchMoviesDynamically({
-                restMessage: 'The MovieDatabase(TMDB)',
-                restMethod: 'Search Movie',
-                movieName: searchedMovieName
+        var searchedShowName = v_query.getCondition('name') && v_query.getCondition('name').split('=')[1];
+        if (searchedShowName) {
+            var searchShowFuncResp = fetchShowsDynamically({
+                restMessage: 'SHOW-SPOTTER',
+                restMethod: 'Search Shows',
+                showName: searchedShowName
             });
-            if (searchMovieFuncResp.httpStatus == '200') {
-                searchMovieFuncResp.responseData.results.forEach(function(item) {
+            if (searchShowFuncResp.httpStatus == '200') {
+                searchShowFuncResp.responseData.results.forEach(function(item) {
                     pushDataToTable({
-                        movieData: item
+                        showData: item
                     });
                 });
             }
-        } */
+        }
         if (v_query.getSysId()) {
             var fetchSingleShowFuncResp = fetchShowsDynamically({
                 restMessage: 'SHOW-SPOTTER',
@@ -145,9 +145,9 @@
                     showData: showObj,
                     requestedSys: v_query.getSysId()
                 });
-                // if (new global.ShowSpotterDAO().validateMyWatchList(showObj)) {
-                //     gs.addInfoMessage(showObj.title + '" is already in your watchlist.');
-                // }
+                if (new x_1962882_show_s_0.ShowSpotterDAO().validateMyWatchList(showObj)) {
+                    gs.addInfoMessage(showObj.title + '" is already in your watchlist.');
+                }
             }
         } else {
             var fetchShowsFuncResp = fetchShowsDynamically({
@@ -164,24 +164,6 @@
                     });
                 }
             }
-
-
-
-            // TOP RATED MOVIES
-            /* var fetchMoviesFuncResp = fetchMoviesDynamically({
-                restMessage: 'The MovieDatabase(TMDB)',
-                restMethod: 'Top Rated Movies'
-            });
-            if (fetchMoviesFuncResp.httpStatus == '200') {
-                var moviesArr = fetchMoviesFuncResp.responseData.results;
-                if (moviesArr) {
-                    moviesArr.forEach(function(item) {
-                        pushDataToTable({
-                            movieData: item
-                        });
-                    });
-                }
-            } */
         }
     } catch (ex) {
         var message = ex.message;
@@ -194,14 +176,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>524641013bf332109626920f23e45ad4</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Pull Shows</sys_name>
         <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
         <sys_policy/>
         <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
         <sys_update_name>sys_script_vtable_524641013bf332109626920f23e45ad4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-21 11:44:44</sys_updated_on>
+        <sys_updated_on>2026-03-22 07:50:42</sys_updated_on>
         <table>x_1962882_show_s_0_st_search_shows</table>
         <update_script><![CDATA[(function executeUpdate(v_record, v_changed_fields) {
      // Parameters:
