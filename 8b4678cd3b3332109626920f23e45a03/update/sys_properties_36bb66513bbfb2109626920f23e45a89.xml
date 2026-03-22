@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_1962882_show_s_0.showSpotter.api.key</name>
+        <read_roles/>
+        <suffix>showSpotter.api.key</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-22 12:40:02</sys_created_on>
+        <sys_id>36bb66513bbfb2109626920f23e45a89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1962882_show_s_0.showSpotter.api.key</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_properties_36bb66513bbfb2109626920f23e45a89</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-22 12:40:02</sys_updated_on>
+        <type>password</type>
+        <value>{{gpaes}}6Coap94VJQ0kobOOi9tdO/+V10QAZLt1CKBxGN4r7MBl5e4onSIq/XFtKoZSZgR0iLN8Ss725jSN&#13;
+0f6OHY4fJiTAkYQr7t++8rKly2G7XwxuaZ/hWrdW24gRrA2Yogk59ygkWkIPORfBLLPeNQ60Il/B&#13;
+sfAbrW2ld5Uw5pZCUhbj/0v0HGR/piSu+Lm6tzBiOyql6YgnwW8KGqsBIRR4295khqd8lTnOpGO8&#13;
+giDRecYugOcVljOZkflwWx270WUrJs9aRtcW2F1GHGa8A9gS8ol2bDs0Zb9N6ZT/rf8wTw8=</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=36bb66513bbfb2109626920f23e45a89"/>
+</record_update>
