@@ -107,7 +107,8 @@
                 rating: movieRatingArr[1] ? movieRatingArr[0] + '.' + movieRatingArr[1].slice(0, 1) : movieRatingArr[0],
                 release_date: showData.release_date,
                 genres: genresArr.join(', '),
-                poster: '<img src="' + posterUrl + '" width="180" />'
+                poster: '<img src="' + posterUrl + '" width="180" />',
+                category: v_query.getCondition('category') && v_query.getCondition('category').split('=')[1]
             };
             v_table.addRow(rowObj);
         } catch (ex) {
@@ -151,10 +152,33 @@
                 }
             }
         } else {
-            var fetchShowsFuncResp = fetchShowsDynamically({
-                restMessage: 'SHOW-SPOTTER',
-                restMethod: 'Latest Popular Movies'
-            });
+            var selectedCategory = v_query.getCondition('category') && v_query.getCondition('category').split('=')[1];
+            var fetchShowsFuncResp;
+            if (selectedCategory == '1') { // Latest Popular Movies
+                fetchShowsFuncResp = fetchShowsDynamically({
+                    restMessage: 'SHOW-SPOTTER',
+                    restMethod: 'Latest Popular Movies'
+                });
+                gs.addInfoMessage('<span style="color: #2e7d32;">&#10003;</span> <b>LATEST POPULAR MOVIES</b>');
+            } else if (selectedCategory == '2') { // Top Rated Movies
+                fetchShowsFuncResp = fetchShowsDynamically({
+                    restMessage: 'SHOW-SPOTTER',
+                    restMethod: 'Top Rated Movies'
+                });
+                gs.addInfoMessage('<span style="color: #2e7d32;">&#10003;</span> <b>TOP RATED MOVIES</b>');
+            } else if (selectedCategory == '3') { // Upcoming Movies
+                fetchShowsFuncResp = fetchShowsDynamically({
+                    restMessage: 'SHOW-SPOTTER',
+                    restMethod: 'Upcoming Movies'
+                });
+                gs.addInfoMessage('<span style="color: #2e7d32;">&#10003;</span> <b>UPCOMING MOVIES</b>');
+            } else if (selectedCategory == '4') { // Now Playing
+                fetchShowsFuncResp = fetchShowsDynamically({
+                    restMessage: 'SHOW-SPOTTER',
+                    restMethod: 'Now Playing Movies'
+                });
+                gs.addInfoMessage('<span style="color: #2e7d32;">&#10003;</span> <b>CURRENTLY IN THEATRES</b>');
+            }
             if (fetchShowsFuncResp.httpStatus == '200') {
                 var showsArr = fetchShowsFuncResp.responseData.results;
                 if (showsArr) {
@@ -165,7 +189,6 @@
                     });
                 }
             }
-            gs.addInfoMessage('<span style="color: #2e7d32;">&#10003;</span> <b>LATEST POPULAR MOVIES</b>');
         }
     } catch (ex) {
         var message = ex.message;
@@ -179,14 +202,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>524641013bf332109626920f23e45ad4</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>Pull Shows</sys_name>
         <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
         <sys_policy/>
         <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
         <sys_update_name>sys_script_vtable_524641013bf332109626920f23e45ad4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-22 14:16:43</sys_updated_on>
+        <sys_updated_on>2026-03-22 17:33:01</sys_updated_on>
         <table>x_1962882_show_s_0_st_search_shows</table>
         <update_script><![CDATA[(function executeUpdate(v_record, v_changed_fields) {
      // Parameters:
