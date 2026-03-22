@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="a8815d453b3732109626920f23e45a14" sys_domain="global" table="x_1962882_show_s_0_st_search_shows" version="3" view="">
+    <sys_ui_section caption="" section_id="3fc665953b77b2109626920f23e45a19" sys_domain="global" table="x_1962882_show_s_0_my_watchlist" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>22c0619d3b37b2109626920f23e45acf</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>fcf6e9993b77b2109626920f23e45ab8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>name</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>eac0619d3b37b2109626920f23e45acf</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>b8f6e9993b77b2109626920f23e45ab9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,27 +32,27 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>a6c0619d3b37b2109626920f23e45ad0</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>3cf6e9993b77b2109626920f23e45ac6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>id</element>
+            <element>release_date</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>62c0619d3b37b2109626920f23e45ad1</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>f4f6e9993b77b2109626920f23e45ac7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>.end_split</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>2ec0619d3b37b2109626920f23e45ad1</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>b0f6e9993b77b2109626920f23e45ac8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>overview</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>e6c0619d3b37b2109626920f23e45ad2</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>7cf6e9993b77b2109626920f23e45ac8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,27 +88,27 @@
             <element>.begin_split</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>a2c0619d3b37b2109626920f23e45ad3</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>38f6e9993b77b2109626920f23e45ac9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>release_date</element>
+            <element>id</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>6ec0619d3b37b2109626920f23e45ad3</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>f0f6e9993b77b2109626920f23e45aca</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>.split</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>2ac0619d3b37b2109626920f23e45ad4</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>bcf6e9993b77b2109626920f23e45aca</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>rating</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>e2c0619d3b37b2109626920f23e45ad5</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>78f6e9993b77b2109626920f23e45acb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>.end_split</element>
             <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>aec0619d3b37b2109626920f23e45ad5</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>34f6e9993b77b2109626920f23e45acc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -158,13 +158,13 @@
             <element>genres</element>
             <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>6ac0619d3b37b2109626920f23e45ad6</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>fcf6e9993b77b2109626920f23e45acc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -172,36 +172,36 @@
             <element>poster</element>
             <position>12</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-22 07:11:53</sys_created_on>
-            <sys_id>26c0619d3b37b2109626920f23e45ad7</sys_id>
+            <sys_created_on>2026-03-22 07:38:48</sys_created_on>
+            <sys_id>b8f6e9993b77b2109626920f23e45acd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_st_search_shows" sys_domain="global" view="Default view">a8815d453b3732109626920f23e45a14</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_1962882_show_s_0_my_watchlist" sys_domain="global" view="Default view">3fc665953b77b2109626920f23e45a19</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-22 07:11:53</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:48</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
-            <name>x_1962882_show_s_0_st_search_shows</name>
+            <name>x_1962882_show_s_0_my_watchlist</name>
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-21 11:26:39</sys_created_on>
+            <sys_created_on>2026-03-22 07:38:12</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>a8815d453b3732109626920f23e45a14</sys_id>
+            <sys_id>3fc665953b77b2109626920f23e45a19</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_1962882_show_s_0_st_search_shows</sys_name>
+            <sys_name>x_1962882_show_s_0_my_watchlist</sys_name>
             <sys_overrides/>
             <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
             <sys_policy/>
             <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
-            <sys_update_name>sys_ui_section_a8815d453b3732109626920f23e45a14</sys_update_name>
+            <sys_update_name>sys_ui_section_3fc665953b77b2109626920f23e45a19</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-21 11:26:39</sys_updated_on>
+            <sys_updated_on>2026-03-22 07:38:12</sys_updated_on>
             <sys_user/>
             <title>true</title>
             <view display_value="Default view" name="NULL">Default view</view>

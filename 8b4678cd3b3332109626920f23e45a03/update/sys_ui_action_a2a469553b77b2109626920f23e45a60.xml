@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>!current.isNewRecord() &amp;&amp; !new x_1962882_show_s_0.ShowSpotterDAO().validateMyWatchList(current, 'ui_action');</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style>primary</form_style>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Add to Watchlist</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[var grMyWatchListChecks = new GlideRecord('x_1962882_show_s_0_my_watchlist');
+grMyWatchListChecks.addQuery('id', current.id);
+grMyWatchListChecks.query();
+if (grMyWatchListChecks.next()) {
+    gs.addErrorMessage(current.name + '" is already in your watchlist.');
+} else {
+    var grMyWatchList = new GlideRecord('x_1962882_show_s_0_my_watchlist');
+
+    grMyWatchList.initialize();
+    grMyWatchList.name = current.name;
+    grMyWatchList.genres = current.genres,
+        grMyWatchList.id = current.id,
+        grMyWatchList.imdb_id = current.imdb_id || "",
+        grMyWatchList.overview = current.overview,
+        grMyWatchList.release_date = current.release_date,
+        grMyWatchList.poster = current.poster,
+		grMyWatchList.rating = current.rating
+
+    var sysId = grMyWatchList.insert();
+
+    if (sysId) {
+        gs.addInfoMessage('Success! "' + current.name + '" has been added to your watchlist.');
+    } else {
+        gs.addErrorMessage('Something went wrong while saving the movie.');
+    }
+}
+
+action.setRedirectURL(current);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-22 07:30:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a2a469553b77b2109626920f23e45a60</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Add to Watchlist</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_ui_action_a2a469553b77b2109626920f23e45a60</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-22 07:46:26</sys_updated_on>
+        <table>x_1962882_show_s_0_st_search_shows</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

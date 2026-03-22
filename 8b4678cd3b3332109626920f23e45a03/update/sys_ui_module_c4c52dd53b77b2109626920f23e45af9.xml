@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="SHOW-SPOTTER">2df1c1c53bb332109626920f23e45ae2</application>
+        <filter/>
+        <name>My Watchlists</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1962882_show_s_0.my_watchlist_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-22 07:33:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c4c52dd53b77b2109626920f23e45af9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Watchlists</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_ui_module_c4c52dd53b77b2109626920f23e45af9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-22 07:33:34</sys_updated_on>
+        <table>x_1962882_show_s_0_my_watchlist</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>
