@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>api_key</name>
+        <rest_message_function display_value="Upcoming Movies">b33c639d3b77f2109626920f23e45ab7</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-22 17:22:37</sys_created_on>
+        <sys_id>9a8c6fd93b77f2109626920f23e45a66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>api_key</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_9a8c6fd93b77f2109626920f23e45a66</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-22 17:22:37</sys_updated_on>
+        <type>string</type>
+        <value>eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ZTA3MGNkYzc5YjM0Y2E2ZmNhOGZkZGY2OWZmYzNjNiIsInN1YiI6IjY2MWFhY2RiYWY2ZTk0MDE2M2VjZmQ2NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.W_Il9OE8rB0fPaRAxTsJPJjanV6t53bQWX0UxLGxUwM</value>
+    </sys_rest_message_fn_parameters>
+</record_update>
