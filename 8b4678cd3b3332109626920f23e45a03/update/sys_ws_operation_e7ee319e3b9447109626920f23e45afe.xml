@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>Add to Watchlist</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+    var requestBody = request.body;
+    var requestString = requestBody.dataString;
+    var requestObj = JSON.parse(requestString);
+
+    /* {
+    "Name": "test",
+    "Id": "12345678",
+    "Genre": "Drama",
+    "Overview": "test movie",
+    "Rating": "8.0",
+    "ReleaseDate": "2026-04-19"
+} */
+
+    try {
+        var mandatoryParameter = [];
+        if (!requestObj.id) {
+            mandatoryParameter.push("Id");
+        }
+        if (mandatoryParameter.length > 0) {
+            response.setError(new sn_ws_err.BadRequestError("Mandatory parameters are/is missing: " + mandatoryParameter.join(", ")));
+			return;
+        }
+
+        var grWatchList = new GlideRecord('x_1962882_show_s_0_my_watchlist');
+        grWatchList.initialize();
+        grWatchList.name = requestObj.Name;
+        grWatchList.id = requestObj.Id;
+        grWatchList.genres = requestObj.Genre;
+        grWatchList.overview = requestObj.Overview;
+        grWatchList.rating = requestObj.Rating;
+        grWatchList.release_date = requestObj.ReleaseDate;
+        grWatchList.insert();
+        var responseObj = {
+            "Record": grWatchList.sys_id.toString(),
+            "Message": "Successfully added to watchlist"
+        };
+        response.setBody(responseObj);
+        response.setStatus(201);
+
+    } catch (ex) {
+        var serviceError = new sn_ws_err.ServiceError();
+        serviceError.setStatus(500);
+        serviceError.setMessage("Service error");
+        serviceError.setDetail("The server could not process the request");
+        response.setError(serviceError);
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1962882_show_s_0/show_spotter_watchlist/addToWatchlist</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/addToWatchlist</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-19 08:30:01</sys_created_on>
+        <sys_id>e7ee319e3b9447109626920f23e45afe</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Add to Watchlist</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_ws_operation_e7ee319e3b9447109626920f23e45afe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-19 09:06:39</sys_updated_on>
+        <web_service_definition display_value="SHOW-SPOTTER-Watchlist">e197e99e3bd047109626920f23e45aa1</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
