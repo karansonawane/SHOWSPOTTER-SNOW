@@ -121,6 +121,8 @@
 
     try {
         var searchedShowName = v_query.getCondition('name') && v_query.getCondition('name').split('=')[1];
+		gs.info("k_test_getCondition: " + v_query.getCondition());
+		gs.info("k_test_getEncodedQuery: " + v_query.getEncodedQuery());
         if (searchedShowName) {
             var searchShowFuncResp = fetchShowsDynamically({
                 restMessage: 'SHOW-SPOTTER',
@@ -202,14 +204,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>524641013bf332109626920f23e45ad4</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>Pull Shows</sys_name>
         <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
         <sys_policy/>
         <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
         <sys_update_name>sys_script_vtable_524641013bf332109626920f23e45ad4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-22 17:33:01</sys_updated_on>
+        <sys_updated_on>2026-04-29 07:02:21</sys_updated_on>
         <table>x_1962882_show_s_0_st_search_shows</table>
         <update_script><![CDATA[(function executeUpdate(v_record, v_changed_fields) {
      // Parameters:
