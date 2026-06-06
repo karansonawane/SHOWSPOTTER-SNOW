@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1962882_show_s_0.Constants</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>Constants</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var Constants = Class.create();
+
+Constants.REST_MESSAGES = {
+    SHOW_SPOTTER: "SHOW-SPOTTER"
+};
+
+Constants.REST_METHODS = {
+    SEARCH_SHOWS: "Search Shows",
+    SEARCH_SINGLE_SHOW: "Search Single Show",
+    LATEST_POPULAR_MOVIES: "Latest Popular Movies",
+    TOP_RATED_MOVIES: "Top Rated Movies",
+    UPCOMING_MOVIES: "Upcoming Movies",
+    NOW_PLAYING_MOVIES: "Now Playing Movies",
+};
+
+Constants.SEARCH_CATEGORY = {
+    LATEST_POPULAR_MOVIES: "1",
+    TOP_RATED_MOVIES: "2",
+    UPCOMING_MOVIES: "3",
+    NOW_PLAYING_MOVIES: "4"
+};
+
+Constants.INFO_MESSAGES = {
+    LATEST_POPULAR_MOVIES: "LATEST POPULAR MOVIES",
+    TOP_RATED_MOVIES: "TOP RATED MOVIES",
+    UPCOMING_MOVIES: "UPCOMING MOVIES",
+    NOW_PLAYING_MOVIES: "CURRENTLY IN THEATRES"
+};
+
+Constants.prototype = {
+    initialize: function() {},
+
+    type: 'Constants'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-02 08:03:42</sys_created_on>
+        <sys_id>a3a33ce63b2c43109626920f23e45acd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Constants</sys_name>
+        <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
+        <sys_update_name>sys_script_include_a3a33ce63b2c43109626920f23e45acd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:09:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

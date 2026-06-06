@@ -124,32 +124,32 @@
         var SHOWSPOTTERDAO = new x_1962882_show_s_0.ShowSpotterDAO();
 
         var categorySearchObj = {
-            "1": {
-                restMessage: "SHOW-SPOTTER",
+            [CONSTANTS.SEARCH_CATEGORY.LATEST_POPULAR_MOVIES]: {
+                restMessage: CONSTANTS.REST_MESSAGES.SHOW_SPOTTER,
                 restMethod: CONSTANTS.REST_METHODS.LATEST_POPULAR_MOVIES,
-                infoMessage: "LATEST POPULAR MOVIES"
+                infoMessage: CONSTANTS.INFO_MESSAGES.LATEST_POPULAR_MOVIES
             },
-            "2": {
-                restMessage: "SHOW-SPOTTER",
+            [CONSTANTS.SEARCH_CATEGORY.TOP_RATED_MOVIES]: {
+                restMessage: CONSTANTS.REST_MESSAGES.SHOW_SPOTTER,
                 restMethod: CONSTANTS.REST_METHODS.TOP_RATED_MOVIES,
-                infoMessage: "TOP RATED MOVIES"
+                infoMessage: CONSTANTS.INFO_MESSAGES.TOP_RATED_MOVIES
             },
-            "3": {
-                restMessage: "SHOW-SPOTTER",
+            [CONSTANTS.SEARCH_CATEGORY.UPCOMING_MOVIES]: {
+                restMessage: CONSTANTS.REST_MESSAGES.SHOW_SPOTTER,
                 restMethod: CONSTANTS.REST_METHODS.UPCOMING_MOVIES,
-                infoMessage: "UPCOMING MOVIES"
+                infoMessage: CONSTANTS.INFO_MESSAGES.UPCOMING_MOVIES
             },
-            "4": {
-                restMessage: "SHOW-SPOTTER",
+            [CONSTANTS.SEARCH_CATEGORY.NOW_PLAYING_MOVIES]: {
+                restMessage: CONSTANTS.REST_MESSAGES.SHOW_SPOTTER,
                 restMethod: CONSTANTS.REST_METHODS.NOW_PLAYING_MOVIES,
-                infoMessage: "CURRENTLY IN THEATRES"
+                infoMessage: CONSTANTS.INFO_MESSAGES.NOW_PLAYING_MOVIES
             }
         };
 
         var searchedShowName = v_query.getCondition('name') && v_query.getCondition('name').split('=')[1];
         if (searchedShowName) {
             var searchShowFuncResp = fetchShowsDynamically({
-                restMessage: 'SHOW-SPOTTER',
+                restMessage: CONSTANTS.REST_MESSAGES.SHOW_SPOTTER,
                 restMethod: CONSTANTS.REST_METHODS.SEARCH_SHOWS,
                 showName: searchedShowName
             });
@@ -163,7 +163,7 @@
             gs.addInfoMessage('<span style="color: #2e7d32;">&#10003;</span> <b>RESULTS FOR ' + searchedShowName.toUpperCase() + '</b>');
         } else if (v_query.getSysId()) {
             var fetchSingleShowFuncResp = fetchShowsDynamically({
-                restMessage: 'SHOW-SPOTTER',
+                restMessage: CONSTANTS.REST_MESSAGES.SHOW_SPOTTER,
                 restMethod: CONSTANTS.REST_METHODS.SEARCH_SINGLE_SHOW,
                 id: v_query.getSysId().split('_')[0]
             });
@@ -186,7 +186,7 @@
                 restMessage: categoryObj.restMessage,
                 restMethod: categoryObj.restMethod
             });
-			SHOWSPOTTERDAO.customInfoMessage(categoryObj.infoMessage);
+            SHOWSPOTTERDAO.customInfoMessage(categoryObj.infoMessage);
 
             if (fetchShowsFuncResp.httpStatus == '200') {
                 var showsArr = fetchShowsFuncResp.responseData.results;
@@ -211,14 +211,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>524641013bf332109626920f23e45ad4</sys_id>
-        <sys_mod_count>65</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>Pull Shows</sys_name>
         <sys_package display_value="SHOW-SPOTTER" source="x_1962882_show_s_0">8b4678cd3b3332109626920f23e45a03</sys_package>
         <sys_policy/>
         <sys_scope display_value="SHOW-SPOTTER">8b4678cd3b3332109626920f23e45a03</sys_scope>
         <sys_update_name>sys_script_vtable_524641013bf332109626920f23e45ad4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-19 08:10:33</sys_updated_on>
+        <sys_updated_on>2026-05-19 09:18:18</sys_updated_on>
         <table>x_1962882_show_s_0_st_search_shows</table>
         <update_script><![CDATA[(function executeUpdate(v_record, v_changed_fields) {
      // Parameters:
